@@ -23,7 +23,7 @@ void main() {
 
   group('getLastNumberTrivia', () {
     final tNumberTriviaModel =
-        NumberTriviaModel.fromJson(json.decode(fixture('trivia_cached.json')));
+        NumberTriviaModel.fromJson(json.decode(fixture('trivia_cache.json')));
     test(
       'should return NumberTrivia from SharedPreferences when there is one in the cache',
       () async {
