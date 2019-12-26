@@ -60,5 +60,22 @@ void main() {
         verify(mockInputConverter.stringToUnsignedInteger(tNumberString));
       },
     );
+
+    test(
+      'should emit [Error] when the input is invalid',
+      () async {
+        // arrange
+        when(mockInputConverter.stringToUnsignedInteger(any))
+            .thenReturn(Left(InvalidInputFailure()));
+        // assert later
+        final expected = [
+          Empty(),
+          Error(message: NumberTriviaBloc.INVALID_INPUT_FAILURE_MESSAGE),
+        ];
+        expectLater(bloc.state, emitsInOrder(expected));
+        // act
+        bloc.dispatch(GetTriviaForConcreteNumber(tNumberString));
+      },
+    );
   });
 }
