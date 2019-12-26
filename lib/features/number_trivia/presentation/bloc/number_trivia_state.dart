@@ -9,11 +9,6 @@ abstract class NumberTriviaState extends Equatable {
   List<Object> get props => super.props;
 }
 
-class InitialNumberTriviaState extends NumberTriviaState {
-  @override
-  List<Object> get props => [];
-}
-
 class Empty extends NumberTriviaState {}
 
 class Loading extends NumberTriviaState {}
