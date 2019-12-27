@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_number_trivia/features/core/error/exceptions.dart';
+import 'package:flutter_number_trivia/core/error/exceptions.dart';
 import 'package:flutter_number_trivia/features/number_trivia/data/models/number_trivia_model.dart';
 import 'package:http/http.dart' as http;
 

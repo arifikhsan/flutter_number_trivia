@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_number_trivia/features/core/util/input_converter.dart';
+import 'package:flutter_number_trivia/core/util/input_converter.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
