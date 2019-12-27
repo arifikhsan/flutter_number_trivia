@@ -31,21 +31,7 @@ class NumberTriviaPage extends StatelessWidget {
               // Top half
               BlocBuilder<NumberTriviaBloc, NumberTriviaState>(
                 builder: (context, state) {
-                  if (state is Empty) {
-                    return MessageDisplay(
-                      message: 'Start searching!',
-                    );
-                  } else if (state is Loading) {
-                    return LoadingWidget();
-                  } else if (state is Loaded) {
-                    return TriviaDisplay(
-                      numberTrivia: state.trivia,
-                    );
-                  } else if (state is Error) {
-                    return MessageDisplay(
-                      message: state.message,
-                    );
-                  }
+                  return _blocBuilder(state);
                 },
               ),
               SizedBox(
@@ -58,5 +44,27 @@ class NumberTriviaPage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  StatelessWidget _blocBuilder(NumberTriviaState state) {
+    if (state is Empty) {
+      return MessageDisplay(
+        message: 'Start searching!',
+      );
+    } else if (state is Loading) {
+      return LoadingWidget();
+    } else if (state is Loaded) {
+      return TriviaDisplay(
+        numberTrivia: state.trivia,
+      );
+    } else if (state is Error) {
+      return MessageDisplay(
+        message: state.message,
+      );
+    } else {
+      return MessageDisplay(
+        message: 'Unimplemented Error',
+      );
+    }
   }
 }
