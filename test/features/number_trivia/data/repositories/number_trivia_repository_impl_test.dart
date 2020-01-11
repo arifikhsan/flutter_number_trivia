@@ -6,7 +6,7 @@ import 'package:flutter_number_trivia/features/number_trivia/data/datasources/nu
 import 'package:flutter_number_trivia/features/number_trivia/data/datasources/number_trivia_remote_data_source.dart';
 import 'package:flutter_number_trivia/features/number_trivia/data/models/number_trivia_model.dart';
 import 'package:flutter_number_trivia/features/number_trivia/data/repositories/number_trivia_repository_impl.dart';
-import 'package:flutter_number_trivia/features/number_trivia/domain/entities/number_trivia.dart';
+import 'package:flutter_number_trivia/features/number_trivia/domain/entities/number_trivia_entity.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
@@ -57,7 +57,7 @@ void main() {
     final tNumber = 1;
     final tNumberTriviaModel =
         NumberTriviaModel(number: tNumber, text: 'test trivia');
-    final NumberTrivia tNumberTrivia = tNumberTriviaModel;
+    final NumberTriviaEntity tNumberTrivia = tNumberTriviaModel;
 
     test(
       'should check if the device is online',
@@ -151,7 +151,7 @@ void main() {
   group('getRandomNumberTrivia', () {
     final tNumberTriviaModel =
         NumberTriviaModel(number: 123, text: 'test trivia');
-    final NumberTrivia tNumberTrivia = tNumberTriviaModel;
+    final NumberTriviaEntity tNumberTrivia = tNumberTriviaModel;
 
     test(
       'should check if the device is online',

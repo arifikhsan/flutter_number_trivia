@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_number_trivia/features/number_trivia/domain/entities/number_trivia.dart';
+import 'package:flutter_number_trivia/features/number_trivia/domain/entities/number_trivia_entity.dart';
 
-class NumberTriviaModel extends NumberTrivia {
+class NumberTriviaModel extends NumberTriviaEntity {
   NumberTriviaModel({
     @required String text,
     @required int number,

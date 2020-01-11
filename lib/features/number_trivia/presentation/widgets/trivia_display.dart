@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_number_trivia/features/number_trivia/domain/entities/number_trivia.dart';
+import 'package:flutter_number_trivia/features/number_trivia/domain/entities/number_trivia_entity.dart';
 
 class TriviaDisplay extends StatelessWidget {
-  final NumberTrivia numberTrivia;
+  final NumberTriviaEntity numberTrivia;
   const TriviaDisplay({
     Key key,
     @required this.numberTrivia,
