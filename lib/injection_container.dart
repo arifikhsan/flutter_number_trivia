@@ -3,7 +3,7 @@ import 'package:flutter_number_trivia/core/network/network_info.dart';
 import 'package:flutter_number_trivia/core/util/input_converter.dart';
 import 'package:flutter_number_trivia/features/number_trivia/data/repositories/number_trivia_repository_impl.dart';
 import 'package:flutter_number_trivia/features/number_trivia/domain/usecases/get_concrete_number_trivia_usecase.dart';
-import 'package:flutter_number_trivia/features/number_trivia/domain/usecases/get_random_number_trivia.dart';
+import 'package:flutter_number_trivia/features/number_trivia/domain/usecases/get_random_number_trivia_usecase.dart';
 import 'package:flutter_number_trivia/features/number_trivia/presentation/bloc/number_trivia_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -30,7 +30,7 @@ Future<void> init() async {
   serviceLocator
       .registerLazySingleton(() => GetConcreteNumberTriviaUsecase(serviceLocator()));
   serviceLocator
-      .registerLazySingleton(() => GetRandomNumberTrivia(serviceLocator()));
+      .registerLazySingleton(() => GetRandomNumberTriviaUsecase(serviceLocator()));
 
   // Repository
   serviceLocator.registerLazySingleton<NumberTriviaRepository>(
