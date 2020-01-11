@@ -52,8 +52,8 @@ Future<void> init() async {
 
   //! Core
   serviceLocator.registerLazySingleton(() => InputConverter());
-  serviceLocator.registerLazySingleton<NetworkInfo>(
-    () => NetworkInfoImpl(serviceLocator()),
+  serviceLocator.registerLazySingleton<NetworkInfoContract>(
+    () => NetworkInfoImplementation(serviceLocator()),
   );
 
   //! External

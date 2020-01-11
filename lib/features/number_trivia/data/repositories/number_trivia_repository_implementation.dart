@@ -14,7 +14,7 @@ class NumberTriviaRepositoryImplementation
     implements NumberTriviaRepositoryContract {
   final NumberTriviaRemoteDataSource remoteDataSource;
   final NumberTriviaLocalDataSource localDataSource;
-  final NetworkInfo networkInfo;
+  final NetworkInfoContract networkInfo;
 
   NumberTriviaRepositoryImplementation({
     @required this.remoteDataSource,

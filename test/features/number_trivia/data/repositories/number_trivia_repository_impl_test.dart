@@ -15,7 +15,7 @@ class MockRemoteDataSource extends Mock
 
 class MockLocalDataSource extends Mock implements NumberTriviaLocalDataSource {}
 
-class MockNetworkInfo extends Mock implements NetworkInfo {}
+class MockNetworkInfo extends Mock implements NetworkInfoContract {}
 
 void main() {
   NumberTriviaRepositoryImplementation repository;
