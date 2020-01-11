@@ -12,12 +12,12 @@ import '../../../../fixtures/fixture_reader.dart';
 class MockSharedPreferences extends Mock implements SharedPreferences {}
 
 void main() {
-  NumberTriviaLocalDataSourceImpl dataSource;
+  NumberTriviaLocalDataSourceImplementation dataSource;
   MockSharedPreferences mockSharedPreferences;
 
   setUp(() {
     mockSharedPreferences = MockSharedPreferences();
-    dataSource = NumberTriviaLocalDataSourceImpl(
+    dataSource = NumberTriviaLocalDataSourceImplementation(
       sharedPreferences: mockSharedPreferences,
     );
   });

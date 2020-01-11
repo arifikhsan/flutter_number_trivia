@@ -47,7 +47,7 @@ Future<void> init() async {
   );
 
   serviceLocator.registerLazySingleton<NumberTriviaLocalDataSource>(
-    () => NumberTriviaLocalDataSourceImpl(sharedPreferences: serviceLocator()),
+    () => NumberTriviaLocalDataSourceImplementation(sharedPreferences: serviceLocator()),
   );
 
   //! Core
