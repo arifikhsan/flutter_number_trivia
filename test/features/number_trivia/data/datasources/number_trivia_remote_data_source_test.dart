@@ -12,12 +12,12 @@ import '../../../../fixtures/fixture_reader.dart';
 class MockHttpClient extends Mock implements http.Client {}
 
 void main() {
-  NumberTriviaRemoteDataSourceImpl dataSource;
+  NumberTriviaRemoteDataSourceImplementation dataSource;
   MockHttpClient mockHttpClient;
 
   setUp(() {
     mockHttpClient = MockHttpClient();
-    dataSource = NumberTriviaRemoteDataSourceImpl(client: mockHttpClient);
+    dataSource = NumberTriviaRemoteDataSourceImplementation(client: mockHttpClient);
   });
 
   void setUpMockHttpClientSuccess200() {

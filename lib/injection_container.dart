@@ -43,7 +43,7 @@ Future<void> init() async {
 
   // Data sources
   serviceLocator.registerLazySingleton<NumberTriviaRemoteDataSource>(
-    () => NumberTriviaRemoteDataSourceImpl(client: serviceLocator()),
+    () => NumberTriviaRemoteDataSourceImplementation(client: serviceLocator()),
   );
 
   serviceLocator.registerLazySingleton<NumberTriviaLocalDataSource>(
