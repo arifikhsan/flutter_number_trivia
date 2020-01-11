@@ -6,11 +6,11 @@ import 'package:flutter_number_trivia/core/network/network_info.dart';
 import 'package:flutter_number_trivia/features/number_trivia/data/datasources/number_trivia_local_data_source.dart';
 import 'package:flutter_number_trivia/features/number_trivia/data/datasources/number_trivia_remote_data_source.dart';
 import 'package:flutter_number_trivia/features/number_trivia/domain/entities/number_trivia_entity.dart';
-import 'package:flutter_number_trivia/features/number_trivia/domain/repositories/number_trivia_repository.dart';
+import 'package:flutter_number_trivia/features/number_trivia/domain/repositories/number_trivia_repository_contract.dart';
 
 typedef Future<NumberTriviaEntity> _ConcreteOrRandomChooser();
 
-class NumberTriviaRepositoryImpl implements NumberTriviaRepository {
+class NumberTriviaRepositoryImpl implements NumberTriviaRepositoryContract {
   final NumberTriviaRemoteDataSource remoteDataSource;
   final NumberTriviaLocalDataSource localDataSource;
   final NetworkInfo networkInfo;

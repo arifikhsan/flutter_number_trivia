@@ -11,7 +11,7 @@ import 'package:http/http.dart' as http;
 
 import 'features/number_trivia/data/datasources/number_trivia_local_data_source.dart';
 import 'features/number_trivia/data/datasources/number_trivia_remote_data_source.dart';
-import 'features/number_trivia/domain/repositories/number_trivia_repository.dart';
+import 'features/number_trivia/domain/repositories/number_trivia_repository_contract.dart';
 
 final serviceLocator = GetIt.instance;
 
@@ -33,7 +33,7 @@ Future<void> init() async {
       .registerLazySingleton(() => GetRandomNumberTriviaUsecase(serviceLocator()));
 
   // Repository
-  serviceLocator.registerLazySingleton<NumberTriviaRepository>(
+  serviceLocator.registerLazySingleton<NumberTriviaRepositoryContract>(
     () => NumberTriviaRepositoryImpl(
       localDataSource: serviceLocator(),
       networkInfo: serviceLocator(),
