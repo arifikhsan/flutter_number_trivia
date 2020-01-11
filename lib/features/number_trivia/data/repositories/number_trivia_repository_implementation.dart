@@ -10,12 +10,13 @@ import 'package:flutter_number_trivia/features/number_trivia/domain/repositories
 
 typedef Future<NumberTriviaEntity> _ConcreteOrRandomChooser();
 
-class NumberTriviaRepositoryImpl implements NumberTriviaRepositoryContract {
+class NumberTriviaRepositoryImplementation
+    implements NumberTriviaRepositoryContract {
   final NumberTriviaRemoteDataSource remoteDataSource;
   final NumberTriviaLocalDataSource localDataSource;
   final NetworkInfo networkInfo;
 
-  NumberTriviaRepositoryImpl({
+  NumberTriviaRepositoryImplementation({
     @required this.remoteDataSource,
     @required this.localDataSource,
     @required this.networkInfo,

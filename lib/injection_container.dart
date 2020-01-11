@@ -1,7 +1,7 @@
 import 'package:data_connection_checker/data_connection_checker.dart';
 import 'package:flutter_number_trivia/core/network/network_info.dart';
 import 'package:flutter_number_trivia/core/util/input_converter.dart';
-import 'package:flutter_number_trivia/features/number_trivia/data/repositories/number_trivia_repository_impl.dart';
+import 'package:flutter_number_trivia/features/number_trivia/data/repositories/number_trivia_repository_implementation.dart';
 import 'package:flutter_number_trivia/features/number_trivia/domain/usecases/get_concrete_number_trivia_usecase.dart';
 import 'package:flutter_number_trivia/features/number_trivia/domain/usecases/get_random_number_trivia_usecase.dart';
 import 'package:flutter_number_trivia/features/number_trivia/presentation/bloc/number_trivia_bloc.dart';
@@ -34,7 +34,7 @@ Future<void> init() async {
 
   // Repository
   serviceLocator.registerLazySingleton<NumberTriviaRepositoryContract>(
-    () => NumberTriviaRepositoryImpl(
+    () => NumberTriviaRepositoryImplementation(
       localDataSource: serviceLocator(),
       networkInfo: serviceLocator(),
       remoteDataSource: serviceLocator(),
