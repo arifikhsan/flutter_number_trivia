@@ -6,12 +6,12 @@ import 'package:flutter_number_trivia/core/error/failures.dart';
 import 'package:flutter_number_trivia/core/usecases/usecase.dart';
 import 'package:flutter_number_trivia/core/util/input_converter.dart';
 import 'package:flutter_number_trivia/features/number_trivia/domain/entities/number_trivia_entity.dart';
-import 'package:flutter_number_trivia/features/number_trivia/domain/usecases/get_concrete_number_trivia.dart';
+import 'package:flutter_number_trivia/features/number_trivia/domain/usecases/get_concrete_number_trivia_usecase.dart';
 import 'package:flutter_number_trivia/features/number_trivia/domain/usecases/get_random_number_trivia.dart';
 import './bloc.dart';
 
 class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
-  final GetConcreteNumberTrivia getConcreteNumberTrivia;
+  final GetConcreteNumberTriviaUsecase getConcreteNumberTrivia;
   final GetRandomNumberTrivia getRandomNumberTrivia;
   final InputConverter inputConverter;
 
@@ -21,7 +21,7 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
       'Invalid input - The number must be a positive integer';
 
   NumberTriviaBloc({
-    @required GetConcreteNumberTrivia concrete,
+    @required GetConcreteNumberTriviaUsecase concrete,
     @required GetRandomNumberTrivia random,
     @required this.inputConverter,
   })  : assert(concrete != null),
